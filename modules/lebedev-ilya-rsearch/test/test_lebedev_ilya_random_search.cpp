@@ -9,13 +9,13 @@
 
 TEST(RandomSearch, Can_Create) {
     // Arrange
-    RandomSearch* a;
+    RandomSearch* searcher;
 
     // Act
-    a = new RandomSearch(RastriginFunction);
+    searcher = new RandomSearch(RastriginFunction);
 
     // Assert
-    EXPECT_NE(nullptr, a);
+    EXPECT_NE(nullptr, searcher);
 }
 
 TEST(RandomSearch, Throws_When_Dimension_Is_Negative) {
