@@ -28,7 +28,7 @@ TEST(RandomSearch, Throws_When_Dimension_Is_Negative) {
 
 TEST(RandomSearch, Can_Set_And_Get_Dimension) {
     // Arrange
-    RandomSearch a(RastriginFunction, 1, 10000);
+    RandomSearch a(RastriginFunction, 1, 1000);
     int new_dimension = 2;
 
     // Act
@@ -40,7 +40,7 @@ TEST(RandomSearch, Can_Set_And_Get_Dimension) {
 
 TEST(RandomSearch, Can_Set_And_Get_Iteration_Count) {
     // Arrange
-    RandomSearch a(RastriginFunction, 1, 10000);
+    RandomSearch a(RastriginFunction, 1, 1000);
     int new_count = 10;
 
     // Act
