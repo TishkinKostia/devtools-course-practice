@@ -2,6 +2,7 @@ sudo: false
 notifications:
   email: false
 language: cpp
+cache: ccache
 compiler:
   - gcc
   - clang
