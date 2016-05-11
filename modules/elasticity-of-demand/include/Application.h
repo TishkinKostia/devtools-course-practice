@@ -1,0 +1,9 @@
+// Copyright 2016 Tishkin Konstantin
+
+#ifndef MODULES_ELASTICITY_OF_DEMAND_INCLUDE_APPLICATION_H_
+#define MODULES_ELASTICITY_OF_DEMAND_INCLUDE_APPLICATION_H_
+
+#include <iostream>
+#include "include/TElasticity.h"
+
+#endif  // MODULES_ELASTICITY_OF_DEMAND_INCLUDE_APPLICATION_H_
