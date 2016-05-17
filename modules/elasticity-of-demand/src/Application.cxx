@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <string.h>
+#include <string>
 #include <sstream>
 #include "include/Application.h"
 #include "include/TElasticity.h"
@@ -28,8 +28,8 @@ bool Application::validateNumberOfArguments(int argc, const char **argv) {
     if (argc == 1) {
         help(argv[0]);
         return false;
-    }
-    else if (argc != 5) {
+    }else
+        if (argc != 5) {
         help(argv[0], "ERROR: Should be 4 arguments.\n\n");
         return false;
     }
@@ -62,8 +62,6 @@ std::string Application::operator()(const int argc, const char **argv) {
     catch (std::string str) {
         return str;
     }
-    
-            
     stream << "Elasticity By Price Point = " << TElasticity::
         ElasticityByPricePointDo(args.Q1, args.Q0, args.P1, args.P0)
         << "; Elasticity By Price Arc = "<< TElasticity::
