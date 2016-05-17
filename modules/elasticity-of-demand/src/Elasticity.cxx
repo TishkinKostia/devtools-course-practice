@@ -10,6 +10,7 @@ int TElasticity::ElasticityByPricePointDo(int Q1, int Q0, float P1, float P0) {
     return Elasticity;
   }
 }
+
 int TElasticity::ElasticityByPriceArcDo(int Q1, int Q0, float P1, float P0) {
   if (((P1 - P0)*(Q1 + Q0)) == 0) {
     return CODE_ERROR;  // error kod
@@ -18,6 +19,7 @@ int TElasticity::ElasticityByPriceArcDo(int Q1, int Q0, float P1, float P0) {
     return Elasticity;
   }
 }
+
 int TElasticity::ElasticityByIncomeDo(int Q1, int Q0, float I1, float I0) {
   if (((I1 - I0)*Q0) == 0) {
     return CODE_ERROR;  // error kod
@@ -26,6 +28,7 @@ int TElasticity::ElasticityByIncomeDo(int Q1, int Q0, float I1, float I0) {
     return Elasticity;
   }
 }
+
 int TElasticity::ElasticityCrossDo(int QA1, int QA0, float PB1, float PB0) {
   if ((PB0*QA0) == 0) {
     return CODE_ERROR;  // error kod
@@ -34,6 +37,7 @@ int TElasticity::ElasticityCrossDo(int QA1, int QA0, float PB1, float PB0) {
     return Elasticity;
   }
 }
+
 void TElasticity::ElasticityByPricePoint(int Q1, int Q0, float P1, float P0) {
   float Elasticity = ElasticityByPricePointDo(Q1, Q0, P1, P0);
   cout << "Elasticity By Price Point = ";
@@ -53,6 +57,7 @@ void TElasticity::ElasticityByPricePoint(int Q1, int Q0, float P1, float P0) {
   }
   cout << endl;
 }
+
 void TElasticity::ElasticityByPriceArc(int Q1, int Q0, float P1, float P0) {
   float Elasticity = ElasticityByPriceArcDo(Q1, Q0, P1, P0);
   cout << "Elasticity By Price Arc = ";
@@ -78,6 +83,7 @@ void TElasticity::ElasticityByPriceArc(int Q1, int Q0, float P1, float P0) {
   }
   cout << endl;
 }
+
 void TElasticity::ElasticityByIncome(int Q1, int Q0, float I1, float I0) {
   float Elasticity = ElasticityByIncomeDo(Q1, Q0, I1, I0);
   cout << "Elasticity By Income = ";
@@ -102,6 +108,7 @@ void TElasticity::ElasticityByIncome(int Q1, int Q0, float I1, float I0) {
   }
   cout << endl;
 }
+
 void TElasticity::ElasticityCross(int QA1, int QA0, float PB1, float PB0) {
   float Elasticity = ElasticityCrossDo(QA1, QA0, PB1, PB0);
   cout << "Elasticity Cross = ";
@@ -125,4 +132,3 @@ void TElasticity::ElasticityCross(int QA1, int QA0, float PB1, float PB0) {
   }
   cout << endl;
 }
-
