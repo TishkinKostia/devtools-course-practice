@@ -4,13 +4,14 @@
 #define MODULES_ELASTICITY_OF_DEMAND_INCLUDE_APPLICATION_H_
 
 #include <iostream>
+#include <string>
 #include "include/TElasticity.h"
 
 class Application {
-public:
+ public:
     Application();
     std::string operator()(int argc, const char **argv);
-private:
+ private:
     void help(const char *appname, const char *message = "");
     bool validateNumberOfArguments(int argc, const char **argv);
     std::string message_;
