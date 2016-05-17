@@ -28,10 +28,12 @@ bool Application::validateNumberOfArguments(int argc, const char **argv) {
     if (argc == 1) {
         help(argv[0]);
         return false;
-    }else
+    }
+    if (argc != 1) {
         if (argc != 5) {
-        help(argv[0], "ERROR: Should be 4 arguments.\n\n");
-        return false;
+            help(argv[0], "ERROR: Should be 4 arguments.\n\n");
+            return false;
+        }
     }
     return true;
 }
