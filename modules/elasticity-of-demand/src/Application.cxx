@@ -59,14 +59,12 @@ std::string Application::operator()(const int argc, const char **argv) {
         args.Q1 = parseInt(argv[1]);
         args.Q0 = parseInt(argv[2]);
         args.P1 = parseInt(argv[3]);
-		args.P0 = parseInt(argv[4]);
+        args.P0 = parseInt(argv[4]);
     }
     catch (std::string str) {
         return str;
     }
 
     message_ = stream.str();
-
     return message_;
-
 }
