@@ -2,7 +2,7 @@
 
 #include "include/TElasticity.h"
 
-int TElasticity::ElasticityByPricePointDo(int Q1, int Q0, float P1, float P0) {
+int TElasticity::ElasticityByPricePointDo(int Q1, int Q0, int P1, int P0) {
   if (((P1 - P0)*Q0) == 0) {
     return CODE_ERROR;  // error kod
   } else {
@@ -11,7 +11,7 @@ int TElasticity::ElasticityByPricePointDo(int Q1, int Q0, float P1, float P0) {
   }
 }
 
-int TElasticity::ElasticityByPriceArcDo(int Q1, int Q0, float P1, float P0) {
+int TElasticity::ElasticityByPriceArcDo(int Q1, int Q0, int P1, int P0) {
   if (((P1 - P0)*(Q1 + Q0)) == 0) {
     return CODE_ERROR;  // error kod
   } else {
@@ -38,7 +38,7 @@ int TElasticity::ElasticityCrossDo(int QA1, int QA0, float PB1, float PB0) {
   }
 }
 
-void TElasticity::ElasticityByPricePoint(int Q1, int Q0, float P1, float P0) {
+void TElasticity::ElasticityByPricePoint(int Q1, int Q0, int P1, int P0) {
   float Elasticity = ElasticityByPricePointDo(Q1, Q0, P1, P0);
   cout << "Elasticity By Price Point = ";
   cout << Elasticity << endl;
@@ -58,7 +58,7 @@ void TElasticity::ElasticityByPricePoint(int Q1, int Q0, float P1, float P0) {
   cout << endl;
 }
 
-void TElasticity::ElasticityByPriceArc(int Q1, int Q0, float P1, float P0) {
+void TElasticity::ElasticityByPriceArc(int Q1, int Q0, int P1, int P0) {
   float Elasticity = ElasticityByPriceArcDo(Q1, Q0, P1, P0);
   cout << "Elasticity By Price Arc = ";
   cout << Elasticity << endl;

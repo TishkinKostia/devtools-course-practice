@@ -57,3 +57,21 @@ TEST_F(TElasticityTest, Is_Checking_Number_Of_Arguments) {
     // Assert
     Assert("ERROR: Should be 4 arguments\\..*");
 }
+
+TEST_F(TElasticityTest, Is_Checking_Number_Format) {
+	// Arrange
+	vector<string> args = { "e", "2", "3", "2" };
+	// Act
+	Act(args);
+	// Assert
+	Assert("Wrong number format!");
+}
+
+TEST_F(TElasticityTest, Is_Checking_Number_Format) {
+	// Arrange
+	vector<string> args = { "e", "2", "3", "2" };
+	// Act
+	Act(args);
+	// Assert
+	Assert("Wrong number format!");
+}
